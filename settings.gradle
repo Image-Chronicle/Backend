@@ -1,1 +1,20 @@
 rootProject.name = 'backend'
+
+/* Application Module */
+include ':application'
+include ':application:core-application'
+include ':application:image-application'
+
+/* Domain Module */
+include ':domain'
+include ':domain:jpa-common'
+include ':domain:jpa-image-domain'
+include ':domain:jpa-member-domain'
+
+/* Client Module */
+include ':client'
+include ':client:aws-s3-client'
+include ':client:google-oauth-client'
+
+/* Common Module */
+include ':common'

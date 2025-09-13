@@ -1,0 +1,4 @@
+[submodule "application/core-application/src/main/resources/security"]
+	path = application/core-application/src/main/resources/security
+	url = https://github.com/Image-Chronicle/Backend-Environment
+    branch = core

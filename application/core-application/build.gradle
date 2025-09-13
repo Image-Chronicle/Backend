@@ -1,0 +1,32 @@
+group = 'me.imagechronicle'
+version = '0.0.1'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    /* ================================================ Module Area ================================================ */
+    /* Client Module */
+    implementation project(':client:aws-s3-client')
+    implementation project(':client:google-oauth-client')
+
+    /* Domain Module */
+    implementation project(':domain:jpa-image-domain')
+    implementation project(':domain:jpa-member-domain')
+
+    /* Common Module */
+    implementation project(':common')
+
+    /* ============================================== Dependency Area ============================================== */
+    /* Spring */
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    /* API Docs */
+    testImplementation("com.epages:restdocs-api-spec-mockmvc:0.18.4")
+
+    /* Test */
+    testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+}
