@@ -1,6 +1,15 @@
 spring:
   application:
     name: image-application
+  config:
+    import:
+      - security/application-postgresql.yml
+    activate:
+      on-profile:
+        - default
+        - local
+        - dev
+        - prod
   servlet:
     multipart:
       max-file-size: 10MB

@@ -1,0 +1,26 @@
+# Image Application Resources Document
+
+## [2025.10.08] Add Git Submodule
+
+```shell
+git submodule add --force https://github.com/Image-Chronicle/Backend-Environment application/image-application/src/main/resources/security
+```
+
+위 명령어를 실행하여 `Git Submodule`을 추가한 뒤, `.gitmodules` 파일에서 `branch` 부분을 설정해준다.
+
+```
+[submodule "application/core-application/src/main/resources/security"]
+	path = application/core-application/src/main/resources/security
+	url = https://github.com/Image-Chronicle/Backend-Environment
+    branch = core
+[submodule "application/image-application/src/main/resources/security"]
+	path = application/image-application/src/main/resources/security
+	url = https://github.com/Image-Chronicle/Backend-Environment
+    branch = image
+```
+
+```shell
+git submodule sync && git submodule update --remote --merge
+```
+
+수정 후 위 명령어를 실행합니다.
